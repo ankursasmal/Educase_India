@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const ProfilePage = () => {
-  const [name, setName] = useState("Prem");
+  const [name, setName] = useState("Ankur");
   const [email, setEmail] = useState("prem@gmail.com");
   useEffect(() => {
-    const storedUser = localStorage.getItem("reactInternship");
+    const storedUser = localStorage.getItem("UserData");
 
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
-      setEmail(parsedUser.email || "prem@gmail.com");
-      setName(parsedUser.fullName || "Prem");
+      setEmail(parsedUser.email || "ankur@gmail.com");
+      setName(parsedUser.fullName || "Ankur");
     } else {
-      setEmail("prem@gmail.com");
-      setName("Prem");
+      setEmail("ankur@gmail.com");
+      setName("Ankur");
     }
   }, []);
 
@@ -23,9 +23,9 @@ const ProfilePage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="bg-[#F7F8F9] flex flex-col min-h-[812px] gap-5 w-[375px]"
+      className="bg-[#F7F8F9] flex flex-col min-h-[95vh] gap-5 w-[375px]  border-.5px border-gray-600"
     >
-      <div className="flex items-center text-[18px] h-[68px] pl-4 bg-white">
+      <div className="flex items-center text-[18px] h-[68px] pl-4 bg-white border-.5px border-black">
         Account Settings
       </div>
 
@@ -49,8 +49,7 @@ const ProfilePage = () => {
       </div>
 
       <div className="px-[20px] text-[14px] font-300 border-dashed border-gray-300 border-b pb-7">
-        Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy
-        Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maxime repellendus ipsum eum, id nulla vel modi earum perferendis dolore quibusdam suscipit vero ipsam culpa corporis illum, soluta optio aperiam.
       </div>
     </motion.div>
   );

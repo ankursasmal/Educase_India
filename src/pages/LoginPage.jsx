@@ -12,7 +12,7 @@ const SignupPage = () => {
       email,
       password,
     };
-    localStorage.setItem("reactInternship", JSON.stringify(userData));
+    localStorage.setItem("UserData", JSON.stringify(userData));
 
     setTimeout(() => {
       navigate("/profile");
@@ -25,8 +25,9 @@ const SignupPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="bg-[#F7F8F9] flex flex-col min-h-[812px] py-10 px-5 gap-5 w-[375px]"
+      className="bg-[#F7F8F9] flex flex-col justify-between min-h-[95vh] py-10 px-5 gap-5 w-[375px] rounded-se-xl"
     >
+      <div className=" flex flex-col gap-5"> 
       <div>
         <div>
           <h1 className="text-[28px] w-[188px] font-[500]">
@@ -54,7 +55,7 @@ const SignupPage = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Prem Patel"
+                placeholder="Enter your Login Emal"
                 className="w-full px-3 py-2 text-black h-[40px] text-[12.46px] bg-transparent focus:outline-none focus:ring-0"
               />
             </div>
@@ -84,11 +85,14 @@ const SignupPage = () => {
       <div className="flex flex-col gap-3 font-[400]">
         <button
           onClick={handleLogin}
-          className="bg-[#CBCBCB] h-[46px] text-white py-3 rounded-md transition-opacity duration-300 ease-out"
+          className="bg-[#CBCBCB] h-[46px] hover:bg-[#6C25FF] hover:text-white text-white py-3 rounded-md transition-opacity duration-300 ease-out"
         >
           Login
         </button>
       </div>
+      </div>
+
+      <div></div>
     </motion.div>
   );
 };

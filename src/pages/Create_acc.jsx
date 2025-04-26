@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-const SignupPage = () => {
+const Create_acc = () => {
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
@@ -26,7 +26,7 @@ const SignupPage = () => {
       companyName,
       isAgency,
     };
-    localStorage.setItem("reactInternship", JSON.stringify(userData));
+    localStorage.setItem("UserData", JSON.stringify(userData));
     setTimeout(() => {
       navigate("/profile");
     }, 300);
@@ -38,7 +38,7 @@ const SignupPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="bg-[#F7F8F9] flex flex-col min-h-screen w-[375px] p-5"
+      className="bg-[#F7F8F9] flex flex-col min-h-[95vh] w-[375px] p-5"
     >
       <div className="flex flex-col flex-grow">
         <h1 className="text-[28px] w-[188px] font-[500]">
@@ -62,7 +62,7 @@ const SignupPage = () => {
               <input
                 type="text"
                 id="fullname"
-                placeholder="Prem Patel"
+                placeholder="Enter Your Name "
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 required
@@ -200,4 +200,4 @@ const SignupPage = () => {
   );
 };
 
-export default SignupPage;
+export default Create_acc;

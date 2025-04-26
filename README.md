@@ -1,13 +1,70 @@
-# React + Vite
+ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# React Profile Creation with Login and Local Storage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a simple React application that allows users to:
+- **Create an account**
+- **Login to their account**
+- **Create and update their profile**
+- **Store user data securely in the browser's Local Storage**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Educase-India-React
+## 📂 Project Structure
+
+```
+/src
+  /pages
+    - LoginPage.jsx
+    - Create_acc.jsx
+    - Home.jsx
+    - ProfilePage.jsx
+  - App.js
+  - index.js
+  -index.css
+```
+
+---
+
+## 🚀 Features
+
+- **Create Account**: Users can register with a username, email, and password.
+- **Login**: Users can login using their email and password.
+- **Profile Page**: After login, users can create or edit their profile (e.g., name, bio, profile picture).
+- **Local Storage**: All user data (account info and profile) are stored in browser's Local Storage, so data persists even after refresh.
+
+---
+
+## 🛠️ Technologies Used
+
+- React (with Hooks)
+- Local Storage API
+- Tailwind CSS for styling
+
+---
+
+## ⚙️ How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/react-profile-localstorage.git
+   cd react-profile-localstorage
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+
+   ```
+
+4. Open [http://localhost:5173].
+
+---
+ 
