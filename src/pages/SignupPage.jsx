@@ -157,7 +157,7 @@ const SignupPage = () => {
           {/* Agency */}
           <div className="flex flex-col gap-1">
             <label className="text-[13px]" htmlFor="agency">
-              Are you an Agency?<span className="text-red-500">*</span>
+              Are you an Agency?
             </label>
             <div className="flex gap-5 mt-2">
               <label className="flex items-center gap-1 text-sm">
@@ -167,7 +167,6 @@ const SignupPage = () => {
                   value="Yes"
                   checked={isAgency === "Yes"}
                   onChange={(e) => setIsAgency(e.target.value)}
-                  required
                   className="accent-[#6C25FF]"
                 />
                 Yes
