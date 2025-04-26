@@ -49,8 +49,8 @@ This project is a simple React application that allows users to:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/react-profile-localstorage.git
-   cd react-profile-localstorage
+   git clone https://github.com/ankursasmal/Educase_India.git
+   cd Educase_India
    ```
 
 2. Install dependencies:
