@@ -13,13 +13,11 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   const handleCreateAccount = (e) => {
-    e.preventDefault(); // prevent form submit default behavior
-
+    e.preventDefault();
     if (!fullName || !phoneNumber || !email || !password || !isAgency) {
       alert("Please fill all required fields.");
       return;
     }
-
     const userData = {
       fullName,
       phoneNumber,
@@ -40,18 +38,20 @@ const SignupPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="bg-[#F7F8F9] flex flex-col justify-between min-h-[812px] py-10 px-5 gap-5 w-[375px]"
+      className="bg-[#F7F8F9] flex flex-col min-h-screen w-[375px] p-5"
     >
-      <div>
+      <div className="flex flex-col flex-grow">
         <h1 className="text-[28px] w-[188px] font-[500]">
           Create your PopX account
         </h1>
+
         <form
           onSubmit={handleCreateAccount}
-          className="mt-[31px] flex flex-col gap-[29px]"
+          className="mt-[31px] flex flex-col gap-[29px] flex-grow"
         >
-          {/* Full Name */}
+          {/* All your inputs here */}
           <div className="flex flex-col gap-1 relative">
+            {/* Full Name */}
             <label
               className="text-[#6C25FF] absolute -top-2 left-3 pl-1 bg-[#F7F8F9] w-[101px] text-[13px]"
               htmlFor="fullname"
@@ -185,17 +185,17 @@ const SignupPage = () => {
               </label>
             </div>
           </div>
-
-          {/* Button */}
-          <div className="flex flex-col gap-3 font-[400]">
-            <button
-              type="submit"
-              className="bg-[#6C25FF] h-[46px] text-white py-3 rounded-md transition-opacity duration-300 ease-out"
-            >
-              Create Account
-            </button>
-          </div>
         </form>
+      </div>
+
+      {/* Button placed outside form */}
+      <div className="mt-6">
+        <button
+          onClick={handleCreateAccount}
+          className="bg-[#6C25FF] w-full h-[46px] text-white py-3 rounded-md transition-opacity duration-300 ease-out"
+        >
+          Create Account
+        </button>
       </div>
     </motion.div>
   );
